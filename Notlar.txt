@@ -1,0 +1,28 @@
+      #region Yazdýrma Komutlarý
+            //Bir komutun yanýnda mor bir küçük bir kutucuk var. Bu kutucuk, bu komutun bir metod olduðunu gösterir.
+            //Console.Write("Merhaba Dünya");Console.Write() komutu ile ekrana yazdýrma iþlemi yapýlýr.Yazýyý alt satýra geçirmeden ekrana yazdýrýr.
+            //Console.WriteLine("Selam");Console.WriteLine() komutu ile ekrana yazdýrma iþlemi yapýlýr.Yazýyý alt satýra geçerek ekrana yazdýrýr.
+
+            //    Console.WriteLine("***** Yemek Kategorileri *****");
+            //Console.WriteLine();
+            //Console.WriteLine("1- Çorbalar");
+            //Console.WriteLine("2- Ana Yemekler");
+            //Console.WriteLine("3- Soðuk Baþlangýçlar");
+            //Console.WriteLine("4- Salatalar");
+            //Console.WriteLine("5- Tatlýlar ");
+            //Console.WriteLine("6- Ýçecekler ");
+            //Console.WriteLine();
+            //Console.WriteLine("***** Yemek Kategorileri *****");
+            #endregion
+
+            #region Deðiþkenler
+            /*Veriler üzerinde iþlem yapýlmasýna yardýmcý olan ve geçici olarak RAM'de saklanan alanlara deðiþken denir. Deðiþkenler, programýn çalýþmasý sýrasýnda deðerlerini deðiþtirebilirler. Deðiþkenler, belirli bir veri tipine sahiptir ve bu veri tipine uygun deðerler alabilirler  */.
+            //string
+            //Deðiþken_türü deðiþken_adý = deðer;
+            string ad = "Çaðrý";
+            string soyad = "Ediz";
+            Console.WriteLine(ad + " " + soyad);
+
+
+            #endregion
+
