@@ -120,7 +120,7 @@ namespace _02_Variables
             //    //int.Parse() metodu ile Convert.ToInt32() arasındaki fark int.Parse() metodu null değer ile karşılaştığında hata verir ve sadece string değerleri dönüştürür Convert.ToInt32() metodu ise null değer ile karşılaştığında 0 döner ve Convert.ToInt32() metodu  farklı veri tiplerini de dönüştürebilir.            
 
             #endregion
-
+            
             #region Klavyeden Ondalıklı Sayı İşlemleri
 
             //double exam1, exam2, exam3,result;
@@ -157,7 +157,7 @@ namespace _02_Variables
             //}
 
             #endregion
-            //a
+           
 
         }
     }
