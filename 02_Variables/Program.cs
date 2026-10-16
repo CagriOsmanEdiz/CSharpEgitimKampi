@@ -10,11 +10,11 @@ namespace _02_Variables
     {
         static void Main(string[] args)
         {
-            #region Double Değişkenler
-            //double number;
-            //number = 4.85;
-            //Console.WriteLine(number);
-            //Burada double numaraları nokta ile ayırırken konsolda sayı ekranda virgül ile ayrılmış şekilde gösterilir
+        #region Double Değişkenler
+        //double number;
+        //number = 4.85;
+        //Console.WriteLine(number);
+        //Burada double numaraları nokta ile ayırırken konsolda sayı ekranda virgül ile ayrılmış şekilde gösterilir
 
             //Console.WriteLine("***** Fiyat Listesi *****");
             //Console.WriteLine();
@@ -133,6 +133,18 @@ namespace _02_Variables
             //result= (exam1+exam2+exam3)/3;
             //Console.WriteLine("Ortalamanız: " + result);
 
+            double applePrice, orangePrice, strawberryPrice, potatoPrice, tomatoPrice;
+            applePrice = 14.85;
+            orangePrice = 20.95;
+            strawberryPrice = 35.50;
+            potatoPrice = 12.50;
+            tomatoPrice = 18.75;
+            Console.WriteLine("---- Elma Birim Fiyatı: " + applePrice + "TL");
+            Console.WriteLine("---- Portakal Birim Fiyatı: " + orangePrice + "TL");
+            Console.WriteLine("---- Çilek Birim Fiyatı: " + strawberryPrice + "TL");
+            Console.WriteLine("---- Patates Birim Fiyatı: " + potatoPrice + "TL");
+            Console.WriteLine("---- Domates Birim Fiyatı: " + tomatoPrice + "TL");
+            Console.WriteLine();
 
             #endregion
 
