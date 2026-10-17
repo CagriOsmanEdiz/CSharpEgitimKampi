@@ -14,6 +14,7 @@ namespace _01_MainSubjects
             //Bir komutun yanında mor bir küçük bir kutucuk var. Bu kutucuk, bu komutun bir metod olduğunu gösterir.
             //Console.Write("Merhaba Dünya");Console.Write() komutu ile ekrana yazdırma işlemi yapılır.Yazıyı alt satıra geçirmeden ekrana yazdırır.
             //Console.WriteLine("Selam");Console.WriteLine() komutu ile ekrana yazdırma işlemi yapılır.Yazıyı alt satıra geçerek ekrana yazdırır.
+            //Console.WriteLine yazdırdıktan sonra alt satıra geçer.Console.Write yazdırdıktan sonra alt satıra geçmez.
 
             //    Console.WriteLine("***** Yemek Kategorileri *****");
             //Console.WriteLine();
@@ -73,7 +74,7 @@ namespace _01_MainSubjects
             //int
             //int number = 19;
             //Console.WriteLine("Sayı: " + number);
-             
+
             int hamburgerPrice = 300;
             int pizzaPrice = 400;
             int saladPrice = 200;
