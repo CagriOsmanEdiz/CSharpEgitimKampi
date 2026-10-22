@@ -12,7 +12,11 @@ namespace _03_MakingDecision
     {
         static void Main(string[] args)
         {
+
             #region IfElse
+
+            // == eşit mi anlamına gelirken = ifadesi atama olarak kullanılır.
+
             //Console.WriteLine("Lütfen şifreyi giriniz: ");
             //string password;
             //password =Console.ReadLine();
@@ -298,7 +302,7 @@ namespace _03_MakingDecision
 
             //    case '-':
             //        result = n1 - n2; break;
-                
+
             //    case '*':
             //        result = n1 * n2; break;
 

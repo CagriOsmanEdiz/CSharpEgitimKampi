@@ -11,6 +11,7 @@ namespace Exercise
     {
         static void Main(string[] args)
         {
+            #region 02_Variables_Practice
             #region 1. Soru: Alışveriş Kasa Fişi Hesaplama (double, Console.ReadLine() & Tip Dönüşümü)
             //double bananaGram, appleGram,bananaPrice,applePrice,appletotalPrice,bananatotalPrice,totalPrice;
             //bananaPrice = 28.50;
@@ -89,27 +90,27 @@ namespace Exercise
 
 
             #region 3. Soru: Harf İle Not Seviyesi Kontrolü (char & if-else)
-            Console.WriteLine("Lütfen ders notunuzu giriniz: ");
-            char dersNotu = char.Parse(Console.ReadLine().ToUpper());
+            //Console.WriteLine("Lütfen ders notunuzu giriniz: ");
+            //char dersNotu = char.Parse(Console.ReadLine().ToUpper());
 
-            if (dersNotu == 'A')
-            {
-                Console.WriteLine("Mükemmel Not");
-            }
+            //if (dersNotu == 'A')
+            //{
+            //    Console.WriteLine("Mükemmel Not");
+            //}
 
-            else if (dersNotu == 'B' || dersNotu == 'C')
-            {
-                Console.WriteLine("Geçerli Not");
-            }
-            else if (dersNotu == 'F')
-            {
-                Console.WriteLine("Başarısız Not");
-            }
-            else
-            {
-                Console.WriteLine("Geçersiz Harf Notu");
+            //else if (dersNotu == 'B' || dersNotu == 'C')
+            //{
+            //    Console.WriteLine("Geçerli Not");
+            //}
+            //else if (dersNotu == 'F')
+            //{
+            //    Console.WriteLine("Başarısız Not");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Geçersiz Harf Notu");
 
-            }
+            //}
 
             // Ben yazdığım kodda else ifler yerine hep if kullandığım için 'A' koşulu doğru olup 'B' C' ve 'F' geçersiz olacağı için otomatik olarak Geçersiz Harf Notu da ekrana yazdırılıyordu. Birbirleriyle bağlantılı olabilmesi için else if kullanılmalı
 
@@ -118,8 +119,7 @@ namespace Exercise
 
 
 
-
-
+            #endregion
 
             #region 03_Decision_Making_Practice
 
@@ -273,7 +273,142 @@ namespace Exercise
 
             #endregion
 
+            #region 04_Loops_Practice
 
+            #region 1. Soru: Belirli Aralıktaki Sayıların Toplamı (For Döngüsü & Karar Yapısı)
+            //Console.Write("Lütfen bitiş sayısını giriniz: ");
+            //int n1 = int.Parse(Console.ReadLine());
+            //int totalSum = 0;
+
+            //for (int i = 1; i <= n1; i++)
+            //{
+            //    if (i % 3 == 0 && i % 4 == 0) // Hem 3'e hem 4'e bölünebilme
+            //    {
+            //        Console.WriteLine("Bölünen sayı: " + i);
+            //        totalSum += i;
+            //    }
+            //}
+
+            //Console.WriteLine("-----------------------------");
+            //Console.WriteLine("3 ve 4'e bölünen sayıların toplamı: " + totalSum);
+            #endregion
+
+
+
+
+
+            #region 2. Soru: Kullanıcı Parola Doğrulama Simülasyonu (While Döngüsü)
+            //string password = ""; // Başlangıçta boş bir değer veriyoruz
+
+            //// Şifre "1234" olmadığı sürece döngü çalışmaya devam etsin
+            //while (password != "1234")
+            //{
+            //    Console.Write("Lütfen şifrenizi giriniz: ");
+            //    password = Console.ReadLine();
+
+            //    if (password != "1234")
+            //    {
+            //        Console.WriteLine("Hatalı şifre, tekrar deneyiniz!\n");
+            //    }
+            //}
+
+            //Console.WriteLine("Sisteme başarıyla giriş yapıldı.");
+            #endregion
+
+            #region 3. Soru: Sayının Basamak Sayısını ve Basamak Toplamını Bulma (While Döngüsü & Mod/Bölme)
+            //Console.Write("Lütfen bir sayı giriniz: ");
+            //int number = int.Parse(Console.ReadLine());
+
+            //int tempNumber = number; // Orijinal sayıyı kaybetmemek için yedekliyoruz
+            //int sum = 0;             // Basamaklar toplamı
+            //int count = 0;           // Basamak sayısı
+
+            //while (tempNumber > 0)
+            //{
+            //    sum += tempNumber % 10; // Son basamağı toplama ekle
+            //    tempNumber /= 10;       // Son basamağı sayıdan at
+            //    count++;                // Basamak sayısını 1 artır
+            //}
+
+            //Console.WriteLine(number + " sayısı " + count + " basamaklıdır.");
+            //Console.WriteLine("Basamakları toplamı: " + sum);
+
+
+
+
+
+            #endregion
+            #endregion
+
+            #region 05_LoopsWithStar_Practice
+
+            #region 1. Soru: Ters Sayı Piramiti
+
+            //Console.WriteLine("Lütfen bir sayı giriniz: ");
+            //int n = int.Parse(Console.ReadLine()); // Kullanıcıdan piramidin tavan değerini (n) alıyoruz.
+
+            //for (int i = n; i >= 1; i--) // DIŞ DÖNGÜ: Satırları yönetir. n'den 1'e geriye sayarak hem satır numarasını hem basılacak sayıyı (5, 4, 3, 2, 1) belirler.
+            //{
+            //    for (int j = 1; j <= i; j++) // İÇ DÖNGÜ: Sütunları yönetir. 1'den o anki satır numarasına (i) kadar dönerek ekrana kaç adet sayı basılacağını belirler.
+            //    {
+            //        Console.Write(i); // O anki satır değerini (i) yan yana ekrana yazar (alt satıra geçmez).
+            //    }
+
+            //    Console.WriteLine(); // İç döngü bitince (o satırdaki tüm sayılar basılınca) bir alt satıra geçer.
+            //}
+
+
+
+            #endregion
+
+            #region 2. Soru: Çarpım Tablosu Matrisi
+
+
+            //int n = 5;
+
+            //for (int i = 1; i <= n; i++) // DIŞ DÖNGÜ: Satırları yönetir (1. satır, 2. satır... n. satır)
+            //{
+            //    for (int j = 1; j <= n; j++) // İÇ DÖNGÜ: Sütunları yönetir (O satırın içindeki 1., 2... n. eleman)
+            //    {
+            //        Console.Write(i * j + "\t"); // Bulunduğumuz satır (i) ile sütun (j) değerini çarpıp yan yana yazar.
+            //    }
+
+            //    Console.WriteLine(); // İç döngü bitti (satırdaki 5 sayı da basıldı), bir alt satıra geç.
+            //}
+
+
+
+
+            #endregion
+
+            #region 3. Soru: Sağa Dayalı Ters Dik Üçgen
+            //int n = 5;
+
+            //for (int i = 1; i <= n; i++) // DIŞ DÖNGÜ: Satırları yönetir (1'den 5'e)
+            //{
+            //    // 1. İÇ DÖNGÜ: Boşlukları basar (i - 1 adet)
+            //    for (int j = 1; j <= i - 1; j++) // i-1 yapılmasının sebebi örneğin 1.satırda 5 yıldız basacaksak hiçbir boşluk olmaması gerekiyor.
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    // 2. İÇ DÖNGÜ: Yıldızları basar (n - i + 1 adet)
+            //    for (int k = 1; k <= n - i + 1; k++) //(n - i + 1 adet) bunun sebebi ise biz 5-4-3-2-1 şeklinde yıldızların basılmasını istiyoruz. Sadece (n-i) yaparsak i=1 için 5-1=4 olur ve 4 tane yıldız basmış oluruz.
+            //    {
+            //        Console.Write("*");
+            //    }
+
+            //    // Satırdaki tüm karakterler basıldı, alt satıra geç
+            //    Console.WriteLine();
+            //}
+
+
+
+
+
+            #endregion
+
+            #endregion
 
         }
     }

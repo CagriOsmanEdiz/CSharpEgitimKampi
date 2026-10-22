@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization.Formatters;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,14 +45,14 @@ namespace _05_LoopsWithStars
 
             #region Dik Üçgen
 
-            //for (int i = 1; i <= 5; i++)
-            //{
-            //    for (int j = 1; j <= i; j++)
-            //    {
-            //        Console.Write("*");
-            //    }
-            //    Console.WriteLine();
-            //}
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
 
             #endregion
 
@@ -91,34 +92,36 @@ namespace _05_LoopsWithStars
             #endregion
 
             #region Baklava Dilimi
-            int n = 5;
-            // Üst Kısım
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = n - i; j > 0; j--)
-                {
-                    Console.Write(" ");
-                }
-                for (int k = 1; k <= 2 * i - 1; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
 
-            // Alt Kısım
-            for (int i = n - 1; i >= 1; i--)
-            {
-                for (int j = n - i; j > 0; j--)
-                {
-                    Console.Write(" ");
-                }
-                for (int k = 1; k <= 2 * i - 1; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+            //int n = 5;
+
+            //// Üst Kısım
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    for (int j = n - i; j > 0; j--)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    for (int k = 1; k <= 2 * i - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //// Alt Kısım
+            //for (int i = n - 1; i >= 1; i--)
+            //{
+            //    for (int j = n - i; j > 0; j--)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    for (int k = 1; k <= 2 * i - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
 
 
 
@@ -147,7 +150,7 @@ namespace _05_LoopsWithStars
             #region Ters Piramit
 
             //int n = 5;
-            
+
             //for(int i = n; i >= 1; i--)
             //{
             //    for(int j = n - i; j > 0; j--)
@@ -162,6 +165,32 @@ namespace _05_LoopsWithStars
             //}
 
             #endregion
+
+            //Desen sorularını çözerken ilk sorun şu olmalı: 
+            //"Ekranda kaç farklı karakter tipi var?" Sadece yıldız varsa --> 1 Dış, 1 İç döngü yeterlidir.Boşluk ve Yıldız beraber simetri oluşturuyorsa --> 1 Dış, 2 İç döngü gerekir.
+            //İkinci sorun: "Sütun sayısı sabit mi, yoksa satıra göre değişiyor mu?"Sütun sayısı sabitse(Kare / Dikdörtgen) --> İç döngü sınırı j <= n olur.Sütun sayısı satıra göre değişiyorsa(Üçgen / Piramit) --> İç döngü sınırı satır değişkenine bağlanır(j <= i veya j <= n - i).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
+
     }
 }
