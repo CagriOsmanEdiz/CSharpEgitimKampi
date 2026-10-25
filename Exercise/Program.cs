@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Eventing.Reader;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Exercise
@@ -411,23 +415,270 @@ namespace Exercise
 
             #endregion
 
+            #region 06_Arrays_Practice
 
-            int n = 5;
+            #region 1. Soru: Rastgele Sayı Dizisinde Çift/Tek ve Max/Min Analizi
 
-            for(int i = 1; i <= n; i++)
-            {
-                for(int j = 1; j <= i - 1; j++)
-                {
-                    Console.Write(" ");
-                }
-                for(int k = 1; k <= n-i+1; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+            //int[] numbers = { 1, 23, 55, 36, 83, 14, 74, 77, 22, 73 };
+
+            //// Diziyi küçükten büyüğe sıralar
+            //Array.Sort(numbers);
+
+            //Console.WriteLine("Dizideki en büyük sayı: " + numbers.Max());
+            //Console.WriteLine("Dizideki en küçük sayı: " + numbers.Min());
+
+            //int ciftToplam = 0;
+            //int tekToplam = 0;
+            //int tekAdet = 0; // Ortalamayı hesaplayabilmek için tek sayı adedini tutuyoruz
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] % 2 == 0)
+            //    {
+            //        ciftToplam += numbers[i];
+            //    }
+            //    else // % 2 == 0 değilse kesinlikle tektir
+            //    {
+            //        tekToplam += numbers[i];
+            //        tekAdet++; // Her tek sayı bulduğumuzda adedi 1 artırıyoruz
+            //    }
+            //}
+
+            //// Ortalamayı küsüratlı (ondalıklı) alabilmek için (double) dönüşümü yapıyoruz
+            //double tekOrtalama = (double)tekToplam / tekAdet;
+
+            //Console.WriteLine("Dizideki çift sayıların toplamı: " + ciftToplam);
+            //Console.WriteLine("Dizideki tek sayıların ortalaması: " + tekOrtalama);
 
 
+
+
+            #endregion
+
+            #region 2. Soru: Öğrenci Not Otomasyonu (Kullanıcıdan Değer Alma & Arama)
+
+            //string[] student = new string[5];
+            //int[] grades = new int[5];
+
+            //for (int i = 0; i < student.Length; i++)
+            //{
+            //    Console.Write($"Lütfen {i + 1}. öğrencinin adını ve soyadını giriniz: ");
+            //    student[i] = Console.ReadLine();
+
+            //    Console.Write($"Lütfen {student[i]} isimli öğrencinin notunu giriniz: ");
+            //    grades[i] = int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("-----------------------");
+            //}
+            //string st;
+            //Console.Write("Lütfen velisi olduğunuz öğrencinin adını ve soyadını giriniz: ");
+            //st = Console.ReadLine();
+
+            //int index = Array.IndexOf(student, st);
+
+            //if (index != -1)
+            //{
+            //    Console.WriteLine($"Velisi olduğunuz {st} isimli öğrencinin notu: {grades[index]}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sistemde bu isimde bir öğrenci bulunamadı.");
+            //}
+
+
+
+
+
+
+
+
+            #endregion
+
+            #region 3. Soru: Sayıların Basamak Toplamı ve Filtreleme
+
+            //int[] numbers = { 123, 45, 678, 12, 990, 341, 50 };
+            //int sum = 0;
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] % 3 == 0)
+            //    {
+
+            //        Console.WriteLine(numbers[i]);
+            //        Console.WriteLine("------------------------------");
+            //        sum += numbers[i];
+            //    }
+
+            //}
+
+            //Console.WriteLine("3'e bölünen sayıların toplamı: " + sum);
+
+            #endregion
+
+            #region 4. Soru: Şehir Arama ve Sıralama Senaryosu
+
+            //string[] cities = new string[5];
+            //for (int i = 0; i < cities.Length; i++)
+            //{
+            //    Console.WriteLine("Lütfen Şehir Adı Giriniz: ");
+            //    cities[i] = Console.ReadLine();
+            //}
+            //Console.WriteLine();
+
+            //Array.Sort(cities);
+            //Array.Reverse(cities);
+
+            //Console.WriteLine();
+            //Console.WriteLine("---------------------------------------");
+            //for (int i = 0; i < cities.Length; i++)
+            //{
+            //    Console.WriteLine(cities[i]);
+            //}
+            //Console.WriteLine($"{cities.Length} tane şehir eklendi");
+            #endregion
+
+            #region 5. Soru: Mağaza Fiyat Analizi ve Filtreleme (Kapsamlı Soru)
+
+            //int[] prices={ 450, 1200, 80, 2300, 1500, 600, 3100, 950 };
+            //int count = 0;
+
+            //Console.WriteLine($"Listedeki en pahalı ürün ile en ucuz ürün arasındaki fark: {prices.Max() - prices.Min()}");
+
+            //for (int i = 0; i < prices.Length; i++) 
+            //{
+
+            //    if (prices[i] >= 1000)
+            //    {
+            //        count++;
+            //        prices[i]=(prices[i]*110)/100;
+            //    }
+
+
+            //}
+
+            //Console.WriteLine("----------------------------------");
+            //Console.WriteLine($"1000 TL ve üzeri ürün sayısı: {count}");
+
+            #endregion
+
+            #region 6. Soru: Rastgele Sayı Tahmin Oyunu (Mantığı Kavrama)
+            //int guessedNumber = 0;
+
+            //while (guessedNumber != 29)
+            //{
+            //    Console.Write("Bir sayı tahmininde bulununuz: ");
+            //    guessedNumber=int.Parse(Console.ReadLine());
+            //    if (guessedNumber < 29)
+            //    {
+            //        Console.WriteLine();
+            //        Console.WriteLine("Daha büyük bir sayı giriniz.");
+            //    }
+
+            //    else if (guessedNumber > 29)
+            //    {
+            //        Console.WriteLine("Daha küçük bir sayı giriniz.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Tebrikler! Doğru sayıyı tahmin ettiniz");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+            #endregion
+
+            #region 7. Soru: Kasada Bakiye Harcama ve Çıkış
+
+            //int bakiye = 1000;
+            //int harcananTutar ;
+            //while (true)
+            //{
+            //    Console.WriteLine("Harcamak istediğiniz tutarı giriniz (Çıkış için 0):");
+            //    harcananTutar = int.Parse(Console.ReadLine());
+
+            //    if (harcananTutar >=     bakiye)
+            //    {
+            //        Console.WriteLine("Yetersiz Bakiye");
+            //    }
+            //    else if (harcananTutar < bakiye||harcananTutar!=0)
+            //    {
+            //        bakiye= bakiye-harcananTutar;
+            //    }
+            //    else if (harcananTutar == 0 || bakiye == 0) {
+            //        break;
+            //    }
+            //}
+
+            //int bakiye = 1000;
+            //int harcananTutar;
+
+            //while (true)
+            //{
+            //    Console.WriteLine($"Mevcut Bakiyeniz: {bakiye} TL");
+            //    Console.Write("Harcamak istediğiniz tutarı giriniz (Çıkış için 0): ");
+            //    harcananTutar = int.Parse(Console.ReadLine());
+
+            //    // 1. Çıkış kontrolü (0 girildi mi?)
+            //    if (harcananTutar == 0)
+            //    {
+            //        Console.WriteLine("Çıkış yapıldı.");
+            //        break;
+            //    }
+
+            //    // 2. Yetersiz bakiye kontrolü
+            //    if (harcananTutar > bakiye)
+            //    {
+            //        Console.WriteLine("Yetersiz Bakiye!");
+            //        Console.WriteLine("-----------------------------");
+            //    }
+            //    // 3. Başarılı harcama (Harcanan tutar bakiyeden küçük veya eşitse)
+            //    else
+            //    {
+            //        bakiye -= harcananTutar; // bakiye = bakiye - harcananTutar ile aynıdır
+            //        Console.WriteLine($"Harcama başarılı. Kalan Bakiye: {bakiye} TL");
+            //        Console.WriteLine("-----------------------------");
+
+            //        // Bakiye tamamen bitti mi kontrolü
+            //        if (bakiye == 0)
+            //        {
+            //            Console.WriteLine("Bakiyeniz tükenmiştir. Çıkış yapılıyor.");
+            //            break;
+            //        }
+            //    }
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+            #endregion
+
+            #region 8. Soru: Sayının Basamaklarını Toplama
+
+            //Console.Write("Sayı girişi yapınız:");
+            //int number = int.Parse(Console.ReadLine());
+            //int tempNumber = number;
+            //int sum = 0;
+
+            //while (tempNumber > 0)
+            //{
+            //    int lastDigit = tempNumber % 10;
+            //    sum+= lastDigit;
+            //    tempNumber=tempNumber/10;
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine($"{number} sayısının basamakları toplamı {sum}'dır");
+            #endregion
+
+            #endregion
 
 
 

@@ -155,36 +155,37 @@ namespace _06_Arrays
             //for (int i = 0; i < numbers.Length; i++)
             //{
             //    sum += numbers[i];
-            //}
+            //}   
             //Console.WriteLine(sum);
 
-            int[] numbers= {1,2,3,4,5,6,7,8,9,10};
+            //int[] numbers= {1,2,3,4,5,6,7,8,9,10};
 
-            Console.WriteLine("Çift Sayılar");
-            Console.WriteLine("-----------------------------");
+            //Console.WriteLine("Çift Sayılar");
+            //Console.WriteLine("-----------------------------");
 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] % 2 == 0)
-                {
-                    Console.WriteLine($"{numbers[i]} sayısı çifttir");
-                }
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] % 2 == 0)
+            //    {
+            //        Console.WriteLine($"{numbers[i]} sayısı çifttir");
+            //    }
               
-            }
-            Console.WriteLine();
-            Console.WriteLine("Tek Sayılar");
-            Console.WriteLine("-----------------------------");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Tek Sayılar");
+            //Console.WriteLine("-----------------------------");
 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] % 2 == 1)
-                {
-                    Console.WriteLine($"{numbers[i]} sayısı tektir");
-                }
-            }
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] % 2 == 1)
+            //    {
+            //        Console.WriteLine($"{numbers[i]} sayısı tektir");
+            //    }
+            //}
 
 
             #endregion
         }
+
     }
 }
