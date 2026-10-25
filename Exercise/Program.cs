@@ -15,6 +15,10 @@ namespace Exercise
     {
         static void Main(string[] args)
         {
+
+            // İlerleyen yerlerde işime yarayacak not:
+            //cities.ForEach(x => Console.WriteLine(x)); => Listeden gelen her elemanı x adıyla tut $\rightarrow$ x değişkenini alıp Console.WriteLine komutuna parametre olarak ver ve çalıştır."
+
             #region 02_Variables_Practice
             #region 1. Soru: Alışveriş Kasa Fişi Hesaplama (double, Console.ReadLine() & Tip Dönüşümü)
             //double bananaGram, appleGram,bananaPrice,applePrice,appletotalPrice,bananatotalPrice,totalPrice;
