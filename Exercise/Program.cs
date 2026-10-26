@@ -684,9 +684,81 @@ namespace Exercise
 
             #endregion
 
+            #region 07_Foreach_Loops_Exercise
+
+            #region Kasiyer & Stok Takip Otomasyonu
+
+            //double toplamFiyat = 0;
+
+
+            //Console.WriteLine("***** Ediz Market'e Hoşgeldiniz. *****");
+            //Console.WriteLine("------------------------------");
+
+            //Console.Write("Bugün kaç farklı ürün satıldı? ");
+            //int soldItem = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
 
 
 
+            //string[] productNames = new string[soldItem];
+            //int[] productUnit = new int[soldItem];
+            //double[] pricePerUnit = new double[soldItem];
+            //double[] totalItemPrice = new double[soldItem];
+
+            //for (int i = 0; i < soldItem; i++)
+            //{
+            //    Console.Write($"Satılan {i + 1}. ürünün adını yazınız: ");
+            //    productNames[i] = (Console.ReadLine().ToUpper());
+
+            //    Console.WriteLine();
+
+            //    Console.Write($"{i + 1}. üründen kaç tane satıldığını yazınız: ");
+            //    productUnit[i] = int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine();
+
+            //    Console.Write($"{i + 1}. ürünün birim fiyatı nedir? ");
+            //    pricePerUnit[i] = double.Parse(Console.ReadLine());
+
+            //    Console.WriteLine();
+
+            //    totalItemPrice[i] = pricePerUnit[i] * productUnit[i];
+
+            //}
+
+            //Console.WriteLine("\n===== SATIŞ ÖZETİ VE RAPOR =====");
+
+
+            //for (int j = 0; j < soldItem; j++)
+            //{
+            //    Console.WriteLine($"Ürün Adı: {productNames[j]} - Adet: {productUnit[j]}| Toplam Tutar: {totalItemPrice[j]}");
+            //    Console.WriteLine();
+            //    toplamFiyat += totalItemPrice[j];
+
+
+
+            //}
+
+            //if (toplamFiyat > 1000)
+            //{
+
+            //    toplamFiyat = (toplamFiyat * 110) / 100;
+            //    Console.WriteLine("Tebrikler, 1000 TL üzeri alışverişe %10 indirim kazandınız!");
+            //    Console.WriteLine(toplamFiyat);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("İndirim uygulanmadı.");
+            //    Console.WriteLine($"Ödenecek Toplam Tutar: {toplamFiyat} TL");
+            //}
+
+            #endregion
+
+
+            #endregion
+
+
+           
 
 
         }

@@ -133,7 +133,7 @@ namespace _07_ForeachLoop
                 studentExamAvg[i] = totalExamResult / 3;
             }
 
-        
+
             //Sınav ortalamaları
             for (int i = 0; i < studentCount; i++)
             {
@@ -161,7 +161,7 @@ namespace _07_ForeachLoop
             #endregion
 
 
-         
+
 
 
         }
