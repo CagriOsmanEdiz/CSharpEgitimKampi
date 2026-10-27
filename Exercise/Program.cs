@@ -15,7 +15,7 @@ namespace Exercise
     {
         static void Main(string[] args)
         {
-
+            //Bir şeyi 3'ten fazla kez tekrar ediyorsan, orada mutlaka bir döngü (for/foreach) kullanılmalıdır.
             // İlerleyen yerlerde işime yarayacak not:
             //cities.ForEach(x => Console.WriteLine(x)); => Listeden gelen her elemanı x adıyla tut $\rightarrow$ x değişkenini alıp Console.WriteLine komutuna parametre olarak ver ve çalıştır."
 
@@ -757,8 +757,98 @@ namespace Exercise
 
             #endregion
 
+            #region 08_Methods_Exercise
 
-           
+            #region Soru 1 (void - Parametreli Metot)
+
+            //void HesapFisi(string urunAdı,int adet,double birimFiyat)
+            //{
+            //    Console.WriteLine($"{urunAdı}- Adet: {adet} | Toplam Tutar: {adet*birimFiyat} TL");
+
+            //}
+            //HesapFisi("Etek",8, 2);
+
+            #endregion
+
+            #region Soru 2 (Geriye double Döndüren Metot)
+
+            //double OrtalamaHesapla(double vize, double final)
+            //{
+            //    double result = (vize * 0.40) + (final * 0.60);
+            //    return result;
+
+            //}
+            //Console.WriteLine(OrtalamaHesapla(40,79));
+
+            #endregion
+
+            #region Soru 3 (Geriye string Döndüren Koşullu Metot)
+
+            //string EhliyetDurumu(string isim,int yas)
+            //{
+            //    if (yas >= 18)
+            //    {
+            //        return isim + " ehliyet alabilir";
+
+            //    }
+            //    else
+            //    {
+
+            //        return $"{isim}  ehliyet alamaz, {18-yas} yıl daha beklemesi gerekiyor.";
+            //    }
+            //}
+            //Console.WriteLine(EhliyetDurumu("Çağrı Osman Ediz", 22));
+
+            #endregion
+
+            #region Senaryo: "Bankamatik (ATM) Para Çekme Otomasyonu"
+
+            string ParaCek(double bakiye,int cekilmekIstenenTutar) 
+            {
+                if (cekilmekIstenenTutar % 10 != 0) 
+                {
+                    return "Hata: Çekilmek istenen tutar 10 TL ve katları olmalıdır.";
+                }
+                if (cekilmekIstenenTutar > bakiye)
+                {
+                    return $"Hata: Yetersiz bakiye. Mevcut bakiyeniz: {bakiye} TL.";
+                }
+                else
+                {
+                    bakiye-=cekilmekIstenenTutar;
+                    int ikiYüzBanknot = cekilmekIstenenTutar / 200;
+                    cekilmekIstenenTutar -= 200*ikiYüzBanknot;
+                    int yüzBanknot = cekilmekIstenenTutar / 100;
+                    cekilmekIstenenTutar -= 100*yüzBanknot;
+                    int elliBanknot= cekilmekIstenenTutar/50;
+                    cekilmekIstenenTutar -= 50*elliBanknot;
+                    int yirmiBanknot = cekilmekIstenenTutar / 20;
+                    cekilmekIstenenTutar-= 20*yirmiBanknot;
+                    int onBanknot = cekilmekIstenenTutar / 10;
+                    cekilmekIstenenTutar -= 10*onBanknot;
+                    return $"İşlem Başarılı! {ikiYüzBanknot} adet 200 TL, {yüzBanknot} adet 100 Tl {elliBanknot} adet 50 TL, {yirmiBanknot} adet 20 Tl, {onBanknot} adet 10 TL. Kalan Bakiye: {bakiye}";
+                }
+
+            
+            }
+            
+
+            Console.WriteLine(ParaCek(1500,380));
+
+
+
+            #endregion
+
+
+
+
+
+
+
+
+
+            #endregion
+
 
 
         }
